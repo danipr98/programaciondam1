@@ -3,7 +3,7 @@ package leeryescribir;
 import java.io.Serializable;
 
 /**
-	 * @author Daniel de paz 
+	 * @author Danipr98
 	 * @version 1.10.1
 	 */
 
