@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
 	 * @author Danipr98
-	 * @version 1.10.1
+	 * @version 1.10.2
 	 */
 
 	public class alumno  implements Serializable{
