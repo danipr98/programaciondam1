@@ -12,10 +12,11 @@ import java.io.Serializable;
 		protected String apellido;
 		private static int numalumno=0;
 		protected static int notaMedia=0;
+		
 		/**
 		 * Getter
 		 * @return nombre:nombre 
-		 */
+		 */ 
 		
 		public String getNombre() {
 			return nombre;
