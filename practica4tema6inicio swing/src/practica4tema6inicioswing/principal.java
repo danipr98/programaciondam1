@@ -6,25 +6,30 @@ import java.awt.Image;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.plaf.ColorChooserUI;
 
-public class principal extends JFrame {
+public class principal extends JFrame  {
 
 	
 	private static final long serialVersionUID = 1L;
 	private Color miColor =new Color(61, 105, 124);
+	
 
 	
 	public void primeraVentana() {
 		
 		setTitle("1ª ventana");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		getContentPane().setBackground(miColor);
+		setBackground(miColor);
 		setSize(700, 600);
 		setLocationRelativeTo(null);
-		setVisible(true);
-		Image icono =Toolkit .getDefaultToolkit().getImage("C:\\Users\\jorge\\eclipse-workspace\\practica4tema6inicio swing\\src\\images.jpg");
+		Image icono =Toolkit .getDefaultToolkit().getImage("C:\\Users\\jorge\\git\\repositoriodam1\\practica4tema6inicio swing\\src\\images.jpg");
 		setIconImage(icono);
+		jp lamina=new jp();
+		add(lamina);
+		setVisible(true);
 	}
 	
 	
@@ -39,7 +44,7 @@ public class principal extends JFrame {
 		
 	}
 	public void img(Toolkit mipantalla) {
-		Image icono=mipantalla.getImage("C:\\Users\\jorge\\eclipse-workspace\\practica4tema6inicio swing\\src\\1.jpg");
+		Image icono=mipantalla.getImage("C:\\Users\\jorge\\git\\repositoriodam1\\practica4tema6inicio swing\\src\\1.jpg");
 		setIconImage(icono);
 		
 	}
@@ -58,10 +63,10 @@ public class principal extends JFrame {
 	public static void main(String[] args) {
 		principal aPrincipal=new principal();
 		
-		//aPrincipal.primeraVentana();
-		aPrincipal.secventana();
+		aPrincipal.primeraVentana();
+		//aPrincipal.secventana();
 		
-		
+		  
 		
 
 	}
