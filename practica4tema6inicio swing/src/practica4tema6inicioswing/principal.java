@@ -10,13 +10,13 @@ import javax.swing.plaf.ColorChooserUI;
 
 public class principal extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
+	private Color miColor =new Color(61, 105, 124);
 
-	public  principal() {
-		Color miColor =new Color(61, 105, 124);
+	
+	public void primeraVentana() {
+		
 		setTitle("1ª ventana");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setBackground(miColor);
@@ -25,10 +25,7 @@ public class principal extends JFrame {
 		setVisible(true);
 		Image icono =Toolkit .getDefaultToolkit().getImage("C:\\Users\\jorge\\eclipse-workspace\\practica4tema6inicio swing\\src\\images.jpg");
 		setIconImage(icono);
-		
-		
 	}
-	
 	
 	
 	public void centrar() {
@@ -46,11 +43,12 @@ public class principal extends JFrame {
 		setIconImage(icono);
 		
 	}
+	
 	public void secventana() {
 		
-		centrar();
 		setTitle("2ª ventana");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		getContentPane().setBackground(miColor);
 		centrar();
 		Image icono =Toolkit .getDefaultToolkit().getImage("C:\\Users\\jorge\\eclipse-workspace\\practica4tema6inicio swing\\src\\images.jpg");
 		setVisible(true);
@@ -60,7 +58,7 @@ public class principal extends JFrame {
 	public static void main(String[] args) {
 		principal aPrincipal=new principal();
 		
-		new principal();
+		//aPrincipal.primeraVentana();
 		aPrincipal.secventana();
 		
 		
