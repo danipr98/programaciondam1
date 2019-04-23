@@ -39,10 +39,12 @@ public class leeryescribir {
 		}
 		javapepe1.close();
 		
+		
+		
+		
 		FileReader javapepe2=null;
 		javapepe2=new FileReader(javapepe);
 		int caract=javapepe2.read();
-		
 		
 		while (caract != -1) {
 			if (caract =='a'){
@@ -59,6 +61,8 @@ public class leeryescribir {
 			System.out.print((char)caract);
 			caract=javapepe2.read();
 			
+			
+			
 		}
 		
 		
@@ -66,6 +70,8 @@ public class leeryescribir {
 		System.out.println("hay tantas a "+a+" hay tantas e "+e+" hay tantas i "+i+" hay tantas o"+o+" hay tantas u "+u);
 		
 		javapepe2.close();
+		
+		
 		
 		
 		FileInputStream  arch_lectura=new FileInputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\descarga.jpg");

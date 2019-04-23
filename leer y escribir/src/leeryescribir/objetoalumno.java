@@ -13,19 +13,23 @@ public class objetoalumno {
 
 	public static void obj1(alumno a1) {
 		try {
-
-			ObjectOutputStream salida = new ObjectOutputStream(
-					new FileOutputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\objeto.obj"));
+			/*
+			 * crear el archivo y la ruta para escribir 
+			 */
+			ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\objeto.obj"));
+			/*
+			 *escribe  
+			 */
 			salida.writeObject(a1);
-
+			//cierra
 			salida.close();
-
-			ObjectInputStream entrada = new ObjectInputStream(
-					new FileInputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\objeto.obj"));
+			// crerar el archivo para leer 
+			ObjectInputStream entrada = new ObjectInputStream(new FileInputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\objeto.obj"));
+			
+			//lee
 			alumno obj = (alumno) entrada.readObject();
-
 			System.out.println("nombre " + a1.getNombre() + "apellido " + a1.getApellido());
-
+			//cierre
 			entrada.close();
 
 		} catch (IOException e) {
@@ -39,29 +43,39 @@ public class objetoalumno {
 
 	public static void array1() {
 
-		// CREAR NUEVO ARCHIVO DE OBJETOS ALUMNOS.
+		
 
 		try {
-			ObjectOutputStream salida = new ObjectOutputStream(
-					new FileOutputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\array.obj"));
+			
+			
+			//crear archivo de escritura 
+			ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\array.obj"));
+			
+			//creo el array  de alumnos 
 			alumno[] alumnos = new alumno[4];
+			//creo el array de trings
 			String[] nombre = { "dani", "pepe", "jose", "antonio", "luis" };
+			//creo variable para guardar  los nombres 
 			int aleatorio = 0;
-
+			//for para escribir el array 
 			for (int i = 0; i < alumnos.length; i++) {
+			//meto de forma random entre los 4 nombres del string
 				aleatorio = (int) (Math.random() * 4);
+			//y aqui lo escribo en el array del alumno 
 				alumnos[i] = new alumno(nombre[aleatorio], "lopez");
 
 			}
 			salida.writeObject(alumnos);
 			salida.close();
 
-			ObjectInputStream entrada = new ObjectInputStream(
-					new FileInputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\array.obj"));
-
+			//creo el archivo leer 
+			ObjectInputStream entrada = new ObjectInputStream(new FileInputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\array.obj"));
+			//aqui creo un array nuevo cast y lo leo  
 			alumno[] alumnos3 = (alumno[]) entrada.readObject();
 
 			entrada.close();
+			
+			//leo el array
 			for (alumno alumno : alumnos3) {
 				System.out.println(alumno.getNombre());
 			}
@@ -72,6 +86,7 @@ public class objetoalumno {
 	}
 
 	public static void file() {
+		//creo un archivo 
 		File com = new File("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\array.obj");
 		File bin = new File("bin");
 
@@ -106,8 +121,7 @@ public class objetoalumno {
 		
 		try {
 		
-			ObjectInputStream entrada1 = new ObjectInputStream(
-					new FileInputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\alumno.obj"));
+			ObjectInputStream entrada1 = new ObjectInputStream(new FileInputStream("C:\\Users\\jorge\\eclipse-workspace\\leer y escribir\\alumno.obj"));
 			alumno obj = (alumno) entrada1.readObject();
 
 			System.out.println("nombre " + a1.getNombre() + "apellido " + a1.getApellido());
